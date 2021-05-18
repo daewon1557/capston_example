@@ -1,0 +1,125 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="ban.js" defer></script>
+    <link rel="stylesheet" href="searchbar.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+    <meta charset="utf-8">
+    <title>키워드로 장소검색하고 목록으로 표출하기</title>
+        <style>
+              
+  .square {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .square span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #BA55D3;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    /* border-radius에 /를 이용하여 2가지를 %를 입력하면 창의적으로 찌그러진 원 만들 수 있음  */
+    /* 가로40%,  세로 60%를 해서 찌그러진 원 만듬 */
+    transition: 0.5s;
+    /* 마우스가 올라갔을 때  배경색이 변경되는 이벤트에 딜레이를 줌 */
+    /* animation: circle 5s linear infinite; */
+  }
+  
+  .square:hover span {
+    border: none;
+  }
+  
+  .square span:nth-child(1) {
+    animation: circle 6s linear infinite;
+  }
+  .square span:nth-child(2) {
+    animation: circle 4s linear infinite;
+    animation-direction: reverse;
+    /* 애니메이션 방향을 반대로도 가능 */
+  }
+  .square span:nth-child(3) {
+    animation: circle 10s linear infinite;
+  }
+  
+  .square:hover span:nth-child(1) {
+    opacity: 0.3;
+    background-color: #FF1493;
+  }
+  .square:hover span:nth-child(2) {
+    opacity: 0.6;
+    background-color: #00008B;
+  }
+  .square:hover span:nth-child(3) {
+    opacity: 0.9;
+    background-color: #708090;
+  }
+  
+  @keyframes circle {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .square div {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .square div a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    padding: 8px;
+    text-decoration: none;
+  }
+</style>
+    
+
+
+</head>
+<body>
+<!-- 
+    <div class="search-box">
+        <input class = "search-txt" type="text" id="pInput" placeholder="지역을 입력해주세요">
+        <a class = "search-btn" onclick="openChild()">  
+         <input class="search-txt" type="pInput" name="" placeholder="Type to search"> 
+         <a class="search-btn" href="http://127.0.0.1:5501/boxstyle/prse.html"> 
+        
+    <i class="fas fa-search-dollar"></i>
+        </a>
+    </div> -->
+
+    <div class="square">
+        <span> </span>
+        <div>
+          <h2>MAP</h2>
+          <p>다양한 지도를 보여주고, 다양한 정보를 공유하는 지도 웹 페이지입니다.</p>
+          <p>어서 오세요!!! </p>
+          
+          <br>
+
+         </div>
+      </div>
+      <div class="search-box">
+        <input class = "search-txt" type="text" id="pInput" placeholder="지역을 입력해주세요"><a class = "search-btn" onclick="openChild()">  
+      <i class="fas fa-search-dollar"></i>
+      </div>
+</html>
