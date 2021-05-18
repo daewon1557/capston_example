@@ -5,8 +5,8 @@ app.use(express.static(__dirname + "/css"))
 app.use(express.static(__dirname + "/js"))
 app.use(express.static(__dirname + "/img"))
 
-const server = app.listen(8080,()=>{
-    console.log('start Server : localhost:8080');
+const server = app.listen(80,()=>{
+    console.log('start Server : localhost:80');
 });
 
 
